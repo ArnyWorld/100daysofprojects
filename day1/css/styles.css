@@ -1,0 +1,115 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ......................... 12
+2. Variables ...................... 16
+3. Estilos generales .............. 27
+4. Créditos ....................... 37
+-------------------- */
+
+
+/* ----- Fuente ----- */
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+
+/* ----- Variables ----- */
+* {
+	--primary-font-family: 'Montserrat', sans-serif;
+	--body-bg-color: #212020;
+	--card-bg-color: #242323;
+	--networks-bg-color:#1f1e1e;
+	--detail-bg-color:#1c1c1b;
+	--text-color: #c2c2c2;
+	--fb-bg-color: #456da4;
+	--li-bg-color: #0984c6;
+	--ig-bg-color: #006184;
+	--lh-text: 22px;
+}
+
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+body {
+	font-family: var(--primary-font-family);
+	background-color: var(--body-bg-color);
+	color: var(--text-color);
+	line-height: var(--lh-text);
+
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.card{
+	width: min(450px, 100%);
+	border-radius: 1.2rem;
+	overflow: hidden;
+}
+.card-top{
+	background-color: var(--card-bg-color);
+	padding: 4.5rem 2.2rem 1rem 2.2rem ;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.card-title{
+	margin-bottom: 10px;
+}
+
+.card-image{
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	object-position: top;
+	border-radius: 100%;
+	margin-bottom: 16px;
+}
+.card-detail{
+	background-color: var(--detail-bg-color);
+	padding: 8px 12px;
+	opacity: 0.6;
+	border-radius:16px ;
+}
+.card-text{
+	color: var(--text-color);
+	text-align: center;
+	font-size: 20px;
+	line-height: 1.6;
+}
+.card-bottom{
+	background-color: var(--networks-bg-color);
+	padding: 1rem 0;
+}
+.network-container{
+	list-style-type: none;
+	display: flex;
+	justify-content: space-evenly;
+}
+.network-list{
+	transition: transform .5s ease;
+}
+.network-link{
+	font-size: 2rem;
+}
+.network-list:nth-child(1) .network-link{
+	color: var(--ig-bg-color);
+}
+.network-list:nth-child(2) .network-link{
+	color: var(--li-bg-color);
+}
+.network-list:nth-child(3) .network-link{
+	color: var(--fb-bg-color);
+}
+
+.network-list:hover{
+	transform: scale(1.2);
+}
+
+/* ------------------------
+Diseño: UIDesign Daily🎨
+Desarrollo: Frontend Club🔥
+--------------------------- */
