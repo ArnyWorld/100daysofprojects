@@ -1,0 +1,188 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ......................... 12
+2. Variables ...................... 16
+3. Estilos generales .............. 27
+-------------------- */
+
+/* ----- Fuente ----- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ----- Variables ----- */
+* {
+	--primary-font-family: 'Poppins', sans-serif;
+	--body-bg-color: #EEF2F9;
+	--btn-bg-color: #4788E9;
+	--text-color: #191847;
+	--white-color: #FFFFFF;
+	--black-color: #000000;
+	--gray-bg-color:#bfbdca;
+	--font-size: 1rem;
+	--lh-text: 22px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+body {
+	font-family: var(--primary-font-family);
+	background-color: var(--body-bg-color);
+	color: var(--text-color);
+	font-size: var(--font-size);
+	line-height: var(--lh-text);
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card{
+	width: 85%;
+	background-color: var(--white-color);
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding: 2rem;
+	gap: 2rem;
+	z-index: -2;
+}
+.card-image{
+	width: 130px;
+	height: 130px;
+	margin: 0 auto;
+}
+.card-detail{
+	background-color: var(--text-color);
+	color: var(--white-color);
+	padding: 3px 8px;
+	border-radius: 1rem;
+	font-size: 0.7rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	display: inline-block;
+}
+.card-title{
+	font-size: 1.1rem;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 1.3rem;
+	line-height: 1.6;
+}
+.card-body{
+	width: 100%;
+}
+.card-priceBefore{
+	color: var(--text-color);
+	text-decoration: line-through;
+	font-size: 0.9rem;
+	margin-bottom: 0.7rem;
+	display: inline-block;
+}
+.card-priceCurrent{
+	font-size: 2rem;
+	margin: 0;
+}
+.card-text{
+	font-size: 0.7rem;
+	color: var(--gray-bg-color);
+	margin-bottom: 1.2rem;
+}
+.card-button{
+	display: inline-block;
+	text-align: center;
+	background-color: var(--btn-bg-color);
+	color: var(--white-color);
+	width: 100%;
+	padding: 0.8rem 0;
+	outline: none;
+	border-radius: 6px;
+	border: none;
+	position: relative;
+	margin-bottom: 1rem;
+	cursor: pointer;
+}
+.card-button::after{
+	content: '';
+	background-color: #4676f1; 
+	position: absolute;
+	z-index: -100000!important;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 6px;
+	border-bottom: 5px solid #4676f1;
+}
+
+.card-stock{
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;	
+	margin-bottom: 1rem;
+}
+.circle{
+	background-color: #0ada8f;
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+}
+
+.card-stock-detail{
+	color: var(--black-color);
+	font-size: 0.7rem;
+}
+
+.buttons{
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;	
+}
+
+.btn{
+	border: 1px solid var(--gray-bg-color);
+	background-color: transparent;
+	border-radius: 8px;
+	padding: 0.9rem 0;
+	color: var(--text-color);
+	cursor: pointer;
+}
+.btn i{
+	color: var(--text-color);
+	display: inline-block;
+	margin-right: 0.5rem;
+}
+
+@media (width>=750px){
+	:root{
+		font-size: 16px;
+	}
+	.card{
+		width: auto;
+		flex-direction: row;
+		padding: 4rem;
+	}
+	.card-image{
+		width: 150px;
+		height: 150px;
+	}
+	
+	.card-body{
+		width: 350px;
+	}
+	.buttons{
+		display: flex;
+		flex-direction: row;
+		gap: 0;
+		justify-content: space-between;
+	}
+	.btn{
+		width: 47%;
+	}
+}
