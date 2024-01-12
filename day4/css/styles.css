@@ -1,0 +1,260 @@
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- */
+
+
+/* ----- Fuente ----- */
+@import url("https://fonts.googleapis.com/css?family=Merryweather&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+:root{
+	font-size: 18px;
+}
+
+/* ----- Variables ----- */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+	--title-font-family: 'Merryweather', sans-serif;
+	--body-font-family: 'Poppins', sans-serif;
+
+	--body-bg-color: #D2DDF6;
+	--card-bg-color: #F6F9FF;
+	--text-color: #12163C;
+
+	--blue-color-1: #96B3FF;
+	--blue-color-2: #6792FF;
+	--blue-color-3: #4473EA;
+	--blue-color-4: #1A52E1;
+
+	--shadow-color:#e5edff;
+
+	--fs-text: 1rem;
+	--lh-text: 22px;
+	
+	
+	--pi: 3.14159265359;
+    --a1: 39;
+    --a3: 34;
+    --a2: 18;
+    --a4: 9;
+}
+
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+body {
+	font-family: var(--primary-font-family);
+	background-color: var(--body-bg-color);
+	color: var(--text-color);
+	font-size: var(--fs-text);
+	line-height: var(--lh-text);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	min-height: 100vh;
+}
+
+.card-doughnut {
+    width: 240px;
+    height: 240px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .svg-title{
+    position: absolute;
+    font-size: 0.8rem;
+    text-align: center;
+	font-family: var(--body-font-family);
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @keyframes percent1 {
+    to {
+      stroke-dasharray: calc(2 * var(--pi) * 70 * var(--a1) / 100) calc(2 * var(--pi) * 70 * calc(1 - var(--a1) / 100));
+    }
+  }
+  
+  @keyframes percent2 {
+    to {
+      stroke-dasharray: calc(2 * var(--pi) * 70 * var(--a2) / 100) calc(2 * var(--pi) * 70 * calc(1 - var(--a2) / 100));
+    }
+  }
+  
+  @keyframes percent3 {
+    to {
+      stroke-dasharray: calc(2 * var(--pi) * 70 * var(--a3) / 100) calc(2 * var(--pi) * 70 * calc(1 - var(--a3) / 100));
+    }
+  }
+  
+  @keyframes percent4 {
+    to {
+      stroke-dasharray: calc(2 * var(--pi) * 70 * var(--a4) / 100) calc(2 * var(--pi) * 70 * calc(1 - var(--a4) / 100));
+    }
+  }
+  
+  .donut {
+    transform-origin: center center;
+    transition: 0.5s ease-in-out;
+    stroke-dashoffset: 0;
+    position: relative;
+    filter: drop-shadow(-0px -5px white);
+}
+
+.donut:nth-child(1) {
+    transform: rotateZ(-90deg);
+    position: absolute;
+    z-index: 100000;
+    animation: percent1 1s ease-in-out forwards;
+}
+
+.donut:nth-child(2) {
+    transform: rotateZ(calc(-90deg  + calc(var(--a1) * 360deg / 100)));
+    animation: percent2 1s ease-in-out forwards;
+}
+
+.donut:nth-child(3) {
+    transform: rotateZ(calc(-90deg  + calc(var(--a1) * 360deg / 100) + calc(var(--a2) * 360deg / 100)));
+    animation: percent3 1s ease-in-out forwards;
+  }
+  
+  .donut:nth-child(4) {
+    transform: rotateZ(calc(-90deg  + calc(var(--a1) * 360deg / 100) + calc(var(--a2) * 360deg / 100) + calc(var(--a3) * 360deg / 100)));
+    animation: percent4 1s ease-in-out forwards;
+  }
+
+.card{
+	background-color: var(--card-bg-color);
+	border-radius: 1rem;
+	padding: 1rem 2rem;
+	box-shadow: 12px 0px 5px var(--shadow-color),0px 12px 5px var(--shadow-color)  ;
+	width: min(95%, 360px);
+	margin: 1rem 0;
+}
+.card-title{
+	font-size: 2rem;
+	color: var(--text-color);
+	margin-bottom: 0.7rem;
+	line-height: 1;
+	
+}
+.card-details{
+	font-family: var(--body-font-family);
+	font-weight: bold;
+	font-size: 0.8rem;
+}
+.card-body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card-description{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.doughnut-labels{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 0.7rem;
+}
+.doughnut-label{
+	font-family: var(--body-font-family);
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+	font-size: 0.9rem;
+}
+.doughnut-detail{
+	align-self: flex-end;
+	width: 210px;
+	display: grid;
+	grid-template-columns: 165px 45px;
+	align-items: center;
+	gap: 0.5rem;
+
+}
+
+.bar{
+	height: 5px;
+	border-radius: 20px;
+	justify-self: end;
+}
+
+.doughnut-labels:nth-child(1) .bar{
+	width: 150px;
+	background-color: var(--blue-color-2);
+}
+.doughnut-labels:nth-child(2) .bar{
+	text-align: right;
+	width: 130px;
+	background-color: var(--blue-color-3);
+}
+.doughnut-labels:nth-child(3) .bar{
+	width: 90px;
+	background-color: var(--blue-color-4);
+}
+.doughnut-labels:nth-child(4) .bar{
+	width: 50px;
+	background-color: var(--blue-color-1);
+}
+.doughnut-value{
+	align-self: center;
+	font-weight: bolder;
+	font-family: var(--body-font-family);
+	font-size: 0.9rem;
+}
+
+.card-link{
+	color: var(--blue-color-4);
+	font-weight: bold;
+	font-family: var(--body-font-family);
+	align-self: flex-end;
+	margin-top: 1rem;
+	font-size: 0.9rem;
+}
+
+@media(width>=768px){
+	:root{
+		font-size: 16px;
+	}
+	.card{
+		padding: 2.5rem 3.5rem;
+		border-radius: 3rem;
+		width: auto;
+	}
+	.card-body{
+		flex-direction: row;
+		gap: 4rem;
+		align-items: center;
+	}
+	.card-description{
+		width: 450px;
+	}
+	.doughnut-labels{
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.doughnut-label{
+		margin-bottom: 0;
+	}
+}

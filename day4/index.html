@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Nombre del autor" />
+    <meta name="description" content="Descripcion del proyecto" />
+    <!-- Biblioteca de íconos Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Archivo reset Normalize -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Archivo de estilos -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Analytics</title>
+  </head>
+
+  <body>
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Traffic source types</h2>
+        <span class="card-details">Views · Last 28 days</span>
+      </div>
+      <div class="card-body">
+        <div class="card-doughnut">
+          <h2 class="svg-title">
+            Trafic <br />
+            sources
+          </h2>
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <circle
+              cx="118"
+              cy="122"
+              class="donut"
+              r="70"
+              stroke-width="20"
+              stroke="#6792FF"
+              fill="none"
+            />
+            <circle
+              cx="120"
+              cy="120"
+              class="donut"
+              r="70"
+              stroke-width="20"
+              stroke="#4473ea"
+              fill="none"
+            />
+            <circle
+              cx="120"
+              cy="120"
+              class="donut"
+              r="70"
+              stroke-width="20"
+              stroke="#1a52e1"
+              fill="none"
+            />
+            <circle
+              cx="120"
+              cy="117"
+              class="donut"
+              r="70"
+              stroke-width="20"
+              stroke="#96b3ff"
+              fill="none"
+            />
+          </svg>
+        </div>
+        <div class="card-description">
+          <div class="doughnut-labels">
+            <p class="doughnut-label">Channel pages</p>
+            <div class="doughnut-detail">
+              <div class="bar"></div>
+              <span class="doughnut-value">37.5%</span>
+            </div>
+          </div>
+          <div class="doughnut-labels">
+            <p class="doughnut-label">Direct or unknow</p>
+            <div class="doughnut-detail">
+              <div class="bar"></div>
+              <span class="doughnut-value">33.6%</span>
+            </div>
+          </div>
+          <div class="doughnut-labels">
+            <p class="doughnut-label">Search</p>
+            <div class="doughnut-detail">
+              <div class="bar"></div>
+              <span class="doughnut-value">11%</span>
+            </div>
+          </div>
+          <div class="doughnut-labels">
+            <p class="doughnut-label">External</p>
+            <div class="doughnut-detail">
+              <div class="bar"></div>
+              <span class="doughnut-value">8%</span>
+            </div>
+          </div>
+          <a href="#" class="card-link">See more</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
