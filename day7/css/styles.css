@@ -1,0 +1,92 @@
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+/* -----------------
+Tabla de contenidos:
+--------------------
+1. Fuente ................ 11
+2. Variables ............. 17
+3. Estilos generales ..... 32
+-------------------- 
+*/
+
+
+
+
+
+:root{
+    
+    /* ----- Variables ----- */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    
+    --very-dark-blue-main: hsl(217, 54%, 11%);
+    --very-blue-card: hsl(216, 50%, 16%);
+    --very-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --bg-body:hsl(210, 43%, 88%);
+    --color-text:hsl(180, 2%, 68%);
+    
+    /* ----- Fuente ----- */
+    --font-base:18px;
+    --body-family:'Outfit', sans-serif;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    list-style-type:none;
+}
+
+body{
+    background-color: var(--bg-body);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--body-family);
+}
+
+/* ----------------------------- */
+/* ----- Estilos generales ----- */
+/* ----------------------------- */
+
+.card{
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 1.5rem;
+    width: min(100%,350px);
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.2);
+    transition: border-radius .6s ease-in-out;
+}
+.card-header{
+    margin-bottom: 0.2rem;
+    overflow: hidden;
+}
+.card:hover{
+    border-radius: 0;
+}
+.card:hover .card-image{
+    transform: scale(1.1);
+}
+.card-image{
+    width: 100%;
+    border-radius:1rem ;
+    transition:transform .6s ease-in-out;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.1rem;
+}
+.card-title{
+    color:var(--very-dark-blue-main);
+    line-height: 1.2;
+    font-weight: 600;
+}
+.card-text{
+    color: var(--color-text);
+    text-align: center;
+    line-height: 1.6;
+    font-weight: bold;
+}
