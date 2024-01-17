@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Arnaldo Muñoz" />
+    <meta name="description" content="Reto número 9 frontend club" />
+    <!-- Biblioteca de íconos Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Archivo reset Normalize -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Archivo de estilos -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>Order Summary Component</title>
+  </head>
+
+  <body>
+    <div class="card">
+      <img
+        src="images/illustration-hero.svg"
+        class="card__header"
+        alt="Card Image"
+      />
+      <div class="card__content">
+        <div class="card__body">
+          <h2 class="card__title">Order Summary</h2>
+          <p class="card__text">
+            You can now listen to millions of songs, audiobooks, and podcasts on
+            any device anywhere you like!
+          </p>
+          <div class="detail">
+            <div class="detail__music">
+              <img
+                src="images/icon-music.svg"
+                class="detail__image"
+                alt="Music Icon"
+              />
+              <div class="detail__content">
+                <h3 class="detail__title">Annual Plan</h3>
+                <span class="detail__price">$59.99/year</span>
+              </div>
+            </div>
+            <a href="#" class="detail__link"> Change </a>
+          </div>
+        </div>
+        <div class="card__footer">
+          <button class="card__button">Proceed to Payment</button>
+          <a href="#" class="card__link">Cancel Order</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
