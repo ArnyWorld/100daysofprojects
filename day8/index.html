@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Nombre del autor" />
+    <meta name="description" content="Descripcion del proyecto" />
+    <!-- Biblioteca de íconos Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Archivo reset Normalize -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Archivo de estilos -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>NFT Preview Card Component</title>
+  </head>
+
+  <body>
+    <!-- Marcado HTML -->
+    <div class="card">
+      <div class="card__header">
+        <img src="images/image-equilibrium.jpg" class="card__image" />
+        <img src="images/icon-view.svg" class="card__view" alt="View SVG" />
+      </div>
+      <div class="card__body">
+        <h2 class="card__title">Equilibrium #3429</h2>
+        <p class="card__text">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
+        <div class="details">
+          <span class="details__left">
+            <img src="images/icon-ethereum.svg" alt="Ethereum" /> 0.041
+            ETH</span
+          >
+          <span class="details__right">
+            <img src="images/icon-clock.svg" alt="Clock" />3 days left
+          </span>
+        </div>
+      </div>
+      <div class="card__footer">
+        <img src="images/image-avatar.png" class="card__avatar" alt="Avatar" />
+        <p class="card__name">Creation of <span>Jules Wyvern</span></p>
+      </div>
+    </div>
+  </body>
+</html>
